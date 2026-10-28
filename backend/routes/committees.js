@@ -20,6 +20,9 @@ router.use(auth);
 
 const same = (a, b) => a != null && b != null && String(a) === String(b);
 
+// بعد populate يصير الحقل مستنداً كاملاً لا معرّفاً: نأخذ المعرّف في الحالتين
+const idOf = (v) => (v && v._id ? v._id : v);
+
 // مسؤول هذا المصلى أو المسؤول الأعلى
 const isMosqueManager = (user, committee) =>
   user.role === 'super_admin' ||
@@ -28,7 +31,7 @@ const isMosqueManager = (user, committee) =>
 // يدير أعضاء اللجنة: مسؤول المصلى، الأعلى، أو رئيس هذه اللجنة
 const canManage = (user, committee) =>
   isMosqueManager(user, committee) ||
-  (user.role === 'committee_admin' && same(committee.adminId, user._id));
+  (user.role === 'committee_admin' && same(idOf(committee.adminId), user._id));
 
 const person = (u, withEmail) =>
   u ? { _id: u._id, name: u.name, ...(withEmail ? { email: u.email } : {}) } : null;
