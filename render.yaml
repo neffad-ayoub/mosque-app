@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: mosque-app
+    runtime: node
+    region: frankfurt
+    plan: free
+    branch: main
+    buildCommand: cd backend && npm ci --omit=dev
+    startCommand: cd backend && npm start
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: AUTH_RATE_LIMIT
+        value: "20"
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGODB_URI
+        sync: false

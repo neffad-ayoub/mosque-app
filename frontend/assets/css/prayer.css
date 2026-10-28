@@ -1,0 +1,66 @@
+/* مواقيت الصلاة */
+.pt-next-card {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  text-align: center;
+  box-shadow: 0 4px 15px var(--shadow-md);
+  margin-bottom: var(--spacing-md);
+}
+.pt-loc { font-size: var(--font-sm); opacity: .9; margin-bottom: var(--spacing-sm); }
+.pt-next-label { font-size: var(--font-sm); opacity: .85; }
+.pt-next-main { font-size: 26px; font-weight: 700; margin: var(--spacing-xs) 0; }
+.pt-countdown {
+  font-size: 38px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  direction: ltr;
+  font-variant-numeric: tabular-nums;
+}
+
+.pt-dates { text-align: center; color: var(--text-secondary); margin-bottom: var(--spacing-md); font-size: var(--font-sm); }
+.pt-hijri { margin-top: 2px; color: var(--primary); font-weight: 600; }
+
+.pt-list { padding: var(--spacing-sm); }
+.pt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px var(--spacing-md);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+.pt-row + .pt-row { border-top: 1px solid var(--border-color); }
+.pt-row-time { font-weight: 700; direction: ltr; font-variant-numeric: tabular-nums; }
+.pt-row.next {
+  background: var(--primary);
+  color: #fff;
+  border-top-color: transparent;
+}
+.pt-row.next + .pt-row { border-top-color: transparent; }
+
+.pt-settings { margin-top: var(--spacing-md); }
+
+/* بطاقة الرئيسية */
+.home-pt {
+  background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+  color: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md) var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  box-shadow: 0 4px 15px var(--shadow-md);
+}
+.home-pt-main { font-size: var(--font-xl); font-weight: 700; }
+.home-pt-note { font-size: var(--font-xs); opacity: .85; margin-top: 2px; }
+.home-pt-count {
+  font-size: 26px;
+  font-weight: 700;
+  direction: ltr;
+  font-variant-numeric: tabular-nums;
+}

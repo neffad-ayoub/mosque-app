@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تطبيق المصليات الجامعية - مواقيت الصلاة والإعلانات">
+    <meta name="theme-color" content="#2d8659">
+    
+    <title>المصليات الجامعية 🕌</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/manage.css">
+    <link rel="stylesheet" href="assets/css/prayer.css">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/icons/favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- التطبيق الرئيسي -->
+    <div id="app" style="display: none;">
+        <!-- الشريط العلوي -->
+        <header class="app-header">
+            <div class="header-content">
+                <button id="menu-btn" class="icon-btn">☰</button>
+                <h1 class="app-title">🕌 المصليات الجامعية</h1>
+                <button id="theme-toggle" class="icon-btn">🌙</button>
+            </div>
+        </header>
+
+        <!-- القائمة الجانبية -->
+        <nav id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h2>القائمة</h2>
+                <button id="close-sidebar" class="icon-btn">✕</button>
+            </div>
+            
+            <ul class="sidebar-menu">
+                <li><a href="#" data-page="home" class="menu-item active">
+                    <span>🏠</span> الرئيسية
+                </a></li>
+                <li><a href="#" data-page="prayer-times" class="menu-item">
+                    <span>🕌</span> مواقيت الصلاة
+                </a></li>
+                <li><a href="#" data-page="sebha" class="menu-item">
+                    <span>📿</span> السبحة
+                </a></li>
+                <li><a href="#" data-page="athkar" class="menu-item">
+                    <span>📖</span> الأذكار
+                </a></li>
+                <li><a href="#" data-page="library" class="menu-item">
+                    <span>📚</span> المكتبة
+                </a></li>
+                <li><a href="#" data-page="announcements" class="menu-item">
+                    <span>📢</span> الإعلانات
+                </a></li>
+                <li><a href="#" data-page="mosques" class="menu-item">
+                    <span>🏛️</span> المصليات
+                </a></li>
+                <li data-roles="mosque_admin" class="hidden"><a href="#" data-page="manage" class="menu-item">
+                    <span>⚙️</span> إدارة المصلى
+                </a></li>
+                <li data-roles="committee_admin,committee_member" class="hidden"><a href="#" data-page="committee" class="menu-item">
+                    <span>👥</span> لجنتي
+                </a></li>
+                <li><a href="#" data-page="profile" class="menu-item">
+                    <span>👤</span> الملف الشخصي
+                </a></li>
+            </ul>
+            
+            <div class="sidebar-footer">
+                <button id="logout-btn" class="btn-logout">
+                    <span>🚪</span> تسجيل الخروج
+                </button>
+            </div>
+        </nav>
+
+        <!-- المحتوى الرئيسي -->
+        <main id="main-content" class="main-content">
+            <!-- سيتم ملؤه ديناميكياً بواسطة JavaScript -->
+        </main>
+
+        <!-- الشريط السفلي -->
+        <nav class="bottom-nav">
+            <button class="nav-btn active" data-page="home">
+                <span class="nav-icon">🏠</span>
+                <span class="nav-label">الرئيسية</span>
+            </button>
+            <button class="nav-btn" data-page="prayer-times">
+                <span class="nav-icon">🕌</span>
+                <span class="nav-label">المواقيت</span>
+            </button>
+            <button class="nav-btn" data-page="sebha">
+                <span class="nav-icon">📿</span>
+                <span class="nav-label">السبحة</span>
+            </button>
+            <button class="nav-btn" data-page="athkar">
+                <span class="nav-icon">📖</span>
+                <span class="nav-label">الأذكار</span>
+            </button>
+            <button class="nav-btn" data-page="library">
+                <span class="nav-icon">📚</span>
+                <span class="nav-label">المكتبة</span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Overlay للقائمة الجانبية -->
+    <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/profile.js"></script>
+    <script src="assets/js/mosques.js"></script>
+    <script src="assets/js/manage.js"></script>
+    <script src="assets/js/prayer-times.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

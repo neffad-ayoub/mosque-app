@@ -1,0 +1,64 @@
+/* صفحات الدخول والتسجيل — تعتمد على متغيرات main.css */
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg) var(--spacing-md);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--card-bg);
+  padding: var(--spacing-xl) var(--spacing-lg);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 10px 40px var(--shadow-lg);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.auth-logo h1 {
+  color: var(--primary);
+  font-size: var(--font-2xl);
+  margin-bottom: var(--spacing-xs);
+}
+
+.auth-logo p {
+  color: var(--text-secondary);
+}
+
+.auth-card .btn {
+  width: 100%;
+}
+
+.auth-card .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-links {
+  text-align: center;
+  margin-top: var(--spacing-lg);
+  color: var(--text-secondary);
+}
+
+.auth-links a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* البريد وكلمة المرور تُكتب من اليسار */
+.form-input[type="email"],
+.form-input[type="password"],
+.form-input[type="tel"] {
+  direction: ltr;
+  text-align: right;
+}

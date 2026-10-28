@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+
+# Secrets — لا يُرفع إلى GitHub أبداً
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build
+dist/
+build/
+
+# Firebase
+firebase-service-account.json

@@ -1,0 +1,158 @@
+/* صفحات المصليات وإدارة المصلى واللجان — تعتمد على متغيرات main.css */
+
+.page-title {
+  font-size: var(--font-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-md);
+}
+
+.section-title {
+  font-size: var(--font-lg);
+  color: var(--text-primary);
+  margin: var(--spacing-lg) 0 var(--spacing-md);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+textarea.form-input {
+  resize: vertical;
+  font-family: 'Cairo', sans-serif;
+}
+
+.form-input.ltr {
+  direction: ltr;
+  text-align: right;
+}
+
+/* ===== قائمة المصليات ===== */
+.mosque-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+}
+
+.mosque-name {
+  font-size: var(--font-lg);
+  color: var(--text-primary);
+}
+
+.mosque-place,
+.mosque-meta {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.mosque-desc {
+  margin: var(--spacing-md) 0 var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.mosque-meta {
+  margin-top: var(--spacing-sm);
+}
+
+.mosque-card .form-msg {
+  margin: var(--spacing-md) 0 0;
+}
+
+/* ===== اللجان ===== */
+.committee-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.committee-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.committee-name {
+  font-size: var(--font-lg);
+  color: var(--primary);
+}
+
+.committee-count {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.committee-desc {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.member-list {
+  list-style: none;
+  margin: var(--spacing-md) 0;
+}
+
+.member-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.member-row:last-child {
+  border-bottom: none;
+}
+
+.member-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spacing-sm);
+  min-width: 0;
+}
+
+.member-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.member-email {
+  color: var(--text-secondary);
+  font-size: var(--font-xs);
+  direction: ltr;
+  unicode-bidi: plaintext;
+  overflow-wrap: anywhere;
+}
+
+.inline-form {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.inline-form .form-input {
+  flex: 1;
+  min-width: 0;
+  direction: ltr;
+  text-align: right;
+}
+
+.committee-card .form-msg {
+  margin: var(--spacing-sm) 0 0;
+}
+
+.committee-card > .btn-danger {
+  margin-top: var(--spacing-xs);
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}

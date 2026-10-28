@@ -1,0 +1,162 @@
+/* صفحة الملف الشخصي وإدارة الأكواد */
+
+.profile-head {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-3xl);
+  font-weight: 700;
+}
+
+.profile-name {
+  font-size: var(--font-xl);
+  color: var(--text-primary);
+}
+
+.profile-email {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  unicode-bidi: plaintext;
+}
+
+.role-badge {
+  display: inline-block;
+  margin-top: var(--spacing-xs);
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: rgba(45, 134, 89, 0.12);
+  color: var(--primary);
+  font-size: var(--font-xs);
+  font-weight: 700;
+}
+
+.profile-mosque {
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.profile-committee {
+  margin-top: var(--spacing-sm);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.hint {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-light);
+  padding: var(--spacing-md);
+}
+
+.code-input {
+  direction: ltr;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-msg {
+  margin-bottom: var(--spacing-md);
+}
+
+.card .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== الأكواد ===== */
+.code-form {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.code-form .form-input {
+  flex: 1;
+  min-width: 0;
+}
+
+.codes-list {
+  margin-top: var(--spacing-md);
+}
+
+.code-row {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+}
+
+.code-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.code-value {
+  font-family: monospace;
+  font-size: var(--font-lg);
+  font-weight: 700;
+  letter-spacing: 1px;
+  direction: ltr;
+  color: var(--text-primary);
+}
+
+.code-status {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+
+.status-available { background: rgba(39, 174, 96, 0.15); color: var(--success); }
+.status-used      { background: rgba(52, 152, 219, 0.15); color: var(--info); }
+.status-expired   { background: rgba(231, 76, 60, 0.15); color: var(--danger); }
+
+.code-meta {
+  margin-top: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+}
+
+.code-actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-sm);
+}
+
+.btn-sm {
+  padding: 6px 14px;
+  font-size: var(--font-sm);
+}
+
+.btn-danger {
+  background: var(--danger);
+  color: #fff;
+}
+
+.btn-danger:hover {
+  background: #c0392b;
+}
